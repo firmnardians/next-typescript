@@ -32,9 +32,7 @@ export default function Tags() {
 	}, []);
 
 	return (
-		<Layout>
-			<p>Tags</p>
-
+		<Layout title='Tags'>
 			{data?.source?.map((item, index) => {
 				return <Tag key={index} />;
 			})}
