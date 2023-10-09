@@ -1,19 +1,19 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, memo, useEffect, useState } from 'react';
 import { ProfileWrapper } from './styled/profile.styled';
 import { useRouter } from 'next/router';
 import List from '../list/List';
 import { DATA_CONNECTIONS } from '../../assets/source';
-import { ProfileType } from '../../type';
+import { ProfileSourceType, ProfileType } from '../../type';
 
 const KEY = {
 	FOLLOWER: 'FOLLOWER',
 	FOLLOWING: 'FOLLOWING',
 };
 
-export default function Profile() {
-	const [key, setKey] = useState(KEY.FOLLOWER);
-	const [animate, setAnimate] = useState(false);
-	const [source, setSource] = useState(DATA_CONNECTIONS);
+const _Profile = (): JSX.Element => {
+	const [key, setKey] = useState<string>(KEY.FOLLOWER);
+	const [animate, setAnimate] = useState<boolean>(false);
+	const [source, setSource] = useState<ProfileSourceType>(DATA_CONNECTIONS);
 
 	const router = useRouter();
 	const { pathname } = router;
@@ -64,4 +64,7 @@ export default function Profile() {
 			</div>
 		</ProfileWrapper>
 	);
-}
+};
+
+const Profile = memo(_Profile);
+export default Profile;
