@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const SidebarWrapper = styled.aside`
 	background-color: var(--greyscale-light-bg);
-	height: 100vh;
+	height: 100svh;
 
 	.list-menu {
 		padding: 10px;
