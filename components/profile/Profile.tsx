@@ -4,11 +4,7 @@ import { useRouter } from 'next/router';
 import List from '../list/List';
 import { DATA_CONNECTIONS } from '../../assets/source';
 import { ProfileSourceType, ProfileType } from '../../type';
-
-const KEY = {
-	FOLLOWER: 'FOLLOWER',
-	FOLLOWING: 'FOLLOWING',
-};
+import { KEY } from '../../constant';
 
 const _Profile = (): JSX.Element => {
 	const [key, setKey] = useState<string>(KEY.FOLLOWER);
