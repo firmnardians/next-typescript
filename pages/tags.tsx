@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout/Layout';
 import customFetch from '../helper/fetch';
 import Tag from '../components/tag/Tag';
+import Skeleton from '../components/skeleton/Skeleton';
+import { NextPage } from 'next';
 
 let ONFETCH = false;
 
-export default function Tags() {
+const Tags: NextPage = () => {
 	const [data, setData] = useState({ source: [], isLoading: true });
 
 	function getListingTag() {
@@ -33,9 +35,23 @@ export default function Tags() {
 
 	return (
 		<Layout title='Tags'>
-			{data?.source?.map((item, index) => {
-				return <Tag key={index} />;
-			})}
+			<div className='mt-5'>
+				{data?.isLoading ? (
+					<Skeleton />
+				) : (
+					<div className='row row-cols-5 '>
+						{data?.source?.map((item, index) => {
+							return (
+								<div key={index} className='col'>
+									<Tag item={item} />
+								</div>
+							);
+						})}
+					</div>
+				)}
+			</div>
 		</Layout>
 	);
-}
+};
+
+export default Tags;
