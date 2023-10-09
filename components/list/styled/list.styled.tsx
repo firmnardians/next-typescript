@@ -41,6 +41,14 @@ export const ListWrapper = styled.div`
 			color: #ffffff;
 			font-weight: bold;
 		}
+
+		&:hover {
+			background-color: #ffffff;
+
+			p {
+				color: #000000;
+			}
+		}
 	}
 
 	.button-connection-active {
@@ -50,6 +58,14 @@ export const ListWrapper = styled.div`
 		p {
 			color: #000000;
 			font-weight: bold;
+		}
+
+		&:hover {
+			background-color: transparent;
+
+			p {
+				color: #ffffff;
+			}
 		}
 	}
 `;
