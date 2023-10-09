@@ -4,7 +4,7 @@ import { ContainerWrapper } from './styled/container.styled';
 import { useRouter } from 'next/router';
 import Profile from '../profile/Profile';
 
-const _Container = ({ children }: { children: ReactNode }) => {
+const _Container = ({ children }: { children: ReactNode }): JSX.Element => {
 	const router = useRouter();
 	const { pathname } = router;
 
