@@ -3,6 +3,7 @@ import { ProfileWrapper } from './styled/profile.styled';
 import { useRouter } from 'next/router';
 import List from '../list/List';
 import { DATA_CONNECTIONS } from '../../assets/source';
+import { ProfileType } from '../../type';
 
 const KEY = {
 	FOLLOWER: 'FOLLOWER',
@@ -17,7 +18,7 @@ export default function Profile() {
 	const router = useRouter();
 	const { pathname } = router;
 
-	function handleConnection(select: any) {
+	function handleConnection(select: ProfileType) {
 		setSource((prevState) =>
 			prevState.map((item) => {
 				return item?.id === select?.id ? { ...item, is_following: !item?.is_following } : item;

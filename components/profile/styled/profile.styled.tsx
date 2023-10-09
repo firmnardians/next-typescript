@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import css from 'styled-jsx/css';
 
-export const ProfileWrapper = styled.div<{ active: any }>`
+export const ProfileWrapper = styled.div<{ active: boolean }>`
 	width: 600px;
 	overflow-y: hidden;
 	height: 100svh;
