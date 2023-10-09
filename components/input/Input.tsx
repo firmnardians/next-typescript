@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { FC, memo } from 'react';
 import { InputWrapper } from './styled/input.styled';
+import { InputType } from '../../type';
 
-export default function Input() {
+const _Input: FC<InputType> = ({ ...props }) => {
 	return (
 		<InputWrapper>
-			<p>Input</p>
-			<input />
+			<input {...props} />
 		</InputWrapper>
 	);
-}
+};
+
+const Input = memo(_Input);
+export default Input;
