@@ -2,12 +2,19 @@ import React from 'react';
 import { SidebarWrapper } from './styled/sidebar.styled';
 import { IconHome, IconLayout } from '../../assets/svg/icon';
 import Link from 'next/link';
+import { LogoSVG } from '../../assets/svg';
 
 export default function Sidebar() {
 	return (
 		<SidebarWrapper>
 			<div className='list-menu'>
 				<ul>
+					<Link href='/'>
+						<li className='logo'>
+							<LogoSVG />
+						</li>
+					</Link>
+
 					<Link href='/'>
 						<li>
 							<IconHome />

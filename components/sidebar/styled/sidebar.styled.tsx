@@ -10,8 +10,8 @@ export const SidebarWrapper = styled.aside`
 		ul {
 			display: block;
 			padding: 0px;
-			margin-top: 50px;
-			margin-bottom: 50px;
+			margin-top: 15px;
+			margin-bottom: 35px;
 
 			li {
 				display: flex;
@@ -21,7 +21,7 @@ export const SidebarWrapper = styled.aside`
 				list-style: none;
 				padding: 20px;
 				cursor: pointer;
-				margin-top: 10px;
+				margin-bottom: 10px;
 
 				&:hover {
 					background-color: #404040;
@@ -33,6 +33,12 @@ export const SidebarWrapper = styled.aside`
 					padding-top: 10px;
 					font-size: 16px;
 					font-weight: 600;
+				}
+			}
+
+			.logo {
+				&:hover {
+					background-color: transparent;
 				}
 			}
 		}
