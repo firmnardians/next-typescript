@@ -1,4 +1,4 @@
-async function customFetch({ endpoint, config }: { endpoint: string; config?: any }) {
+async function customFetch({ endpoint, ...config }: { endpoint: string } & RequestInit) {
 	try {
 		const URL: string = `https://jsonplaceholder.typicode.com/${endpoint}`;
 
