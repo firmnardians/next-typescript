@@ -4,6 +4,7 @@ import customFetch from '../helper/fetch';
 import Tag from '../components/tag/Tag';
 import Skeleton from '../components/skeleton/Skeleton';
 import { NextPage } from 'next';
+import toast from 'react-hot-toast';
 
 let ONFETCH = false;
 
@@ -14,12 +15,8 @@ const Tags: NextPage = () => {
 		setData((prevState) => ({ ...prevState, isLoading: true }));
 
 		customFetch({ endpoint: 'users' })
-			.then((res) => {
-				setData((prevState) => ({ ...prevState, source: res }));
-			})
-			.catch((err) => {
-				console.log(err);
-			})
+			.then((res) => setData((prevState) => ({ ...prevState, source: res })))
+			.catch((err) => toast(`error: ${JSON.stringify(err)}`))
 			.finally(() => {
 				setData((prevState) => ({ ...prevState, isLoading: false }));
 				ONFETCH = false;
