@@ -18,7 +18,7 @@ export const TagWrapper = styled.div`
 			border-radius: 8px;
 			border: 4px solid #fff;
 			display: inline-flex;
-			padding: 7px 14px;
+			padding: 4px 14px;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			display: -webkit-box;

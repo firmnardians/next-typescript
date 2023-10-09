@@ -16,7 +16,7 @@ const Tags: NextPage = () => {
 
 		customFetch({ endpoint: 'users' })
 			.then((res) => setData((prevState) => ({ ...prevState, source: res })))
-			.catch((err) => toast(`error: ${JSON.stringify(err)}`))
+			.catch((err) => toast.error(`${err?.message}`))
 			.finally(() => {
 				setData((prevState) => ({ ...prevState, isLoading: false }));
 				ONFETCH = false;
