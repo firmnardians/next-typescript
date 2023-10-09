@@ -1,4 +1,4 @@
-async function customFetch({ endpoint, ...config }: { endpoint: string } & RequestInit) {
+async function customFetch<T>({ endpoint, ...config }: { endpoint: string } & RequestInit): Promise<T | undefined> {
 	try {
 		const URL: string = `https://jsonplaceholder.typicode.com/${endpoint}`;
 
@@ -9,8 +9,12 @@ async function customFetch({ endpoint, ...config }: { endpoint: string } & Reque
 		});
 
 		return await res.json();
-	} catch (error) {
-		console.log('error', error);
+	} catch (e: unknown) {
+		if (typeof e === 'string') {
+			e.toUpperCase();
+		} else if (e instanceof Error) {
+			throw Error(e?.message);
+		}
 	}
 }
 
