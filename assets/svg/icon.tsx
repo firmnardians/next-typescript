@@ -35,3 +35,21 @@ export const IconLayout = () => {
 		</svg>
 	);
 };
+
+export const IconArrow = () => {
+	return (
+		<svg
+			xmlns='http://www.w3.org/2000/svg'
+			width='28'
+			height='28'
+			viewBox='0 0 24 24'
+			fill='none'
+			stroke='#ffffff'
+			strokeWidth='2'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+		>
+			<path d='M15 18l-6-6 6-6' />
+		</svg>
+	);
+};

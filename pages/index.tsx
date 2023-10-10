@@ -8,6 +8,7 @@ import Search from '../components/search/Search';
 const Home: NextPage = () => {
 	const [dataSearch, setDataSearch] = useState<{ result: number; value: string }>({ result: 12, value: '' });
 	const [renderResult, setRenderResult] = useState<boolean>(false);
+	const [isBackButton, setBackButton] = useState<boolean>(false);
 
 	const router = useRouter();
 	const isDisabled = useMemo(() => dataSearch?.value?.length === 0, [dataSearch?.value]);
@@ -19,13 +20,14 @@ const Home: NextPage = () => {
 	useEffect(() => {
 		if (router?.query && typeof window !== 'undefined') {
 			const { query } = router;
-			if (query?.q && query?.perpage) setRenderResult(true);
-			else setRenderResult(false);
+			const hasParams = query?.q && query?.perpage;
+			setBackButton(Boolean(hasParams) ?? false);
+			setRenderResult(Boolean(hasParams) ?? false);
 		}
 	}, [router]);
 
 	return (
-		<Layout title='Search'>
+		<Layout isBack={isBackButton} title={isBackButton ? 'Results' : 'Search'}>
 			<div className='mt-5 pe-5'>
 				{renderResult ? (
 					<ResultPage />
