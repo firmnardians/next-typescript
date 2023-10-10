@@ -35,3 +35,13 @@ export type ResultStateType = {
 	perpage: number;
 	page: number;
 };
+
+export type TagType = {
+	name: string;
+	website: string;
+};
+
+export type TagStateType = {
+	source: Array<TagType>;
+	isLoading: boolean;
+};

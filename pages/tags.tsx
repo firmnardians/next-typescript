@@ -5,13 +5,14 @@ import Tag from '../components/tag/Tag';
 import Skeleton from '../components/skeleton/Skeleton';
 import { NextPage } from 'next';
 import toast from 'react-hot-toast';
-
-let ONFETCH = false;
+import { TagStateType } from '../type';
 
 const Tags: NextPage = () => {
-	const [data, setData] = useState({ source: [], isLoading: true });
+	const [data, setData] = useState<TagStateType>({ source: [], isLoading: true });
 
+	let ONFETCH = false;
 	function getListingTag() {
+		ONFETCH = true;
 		setData((prevState) => ({ ...prevState, isLoading: true }));
 
 		customFetch({ endpoint: 'users' })
@@ -24,10 +25,8 @@ const Tags: NextPage = () => {
 	}
 
 	useEffect(() => {
-		if (!ONFETCH) {
-			ONFETCH = true;
-			getListingTag();
-		}
+		if (!ONFETCH) getListingTag();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (

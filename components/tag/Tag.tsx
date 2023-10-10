@@ -1,8 +1,9 @@
 import React, { FC, memo } from 'react';
 import { TagWrapper } from './styled/tag.styled';
 import { TagSVG } from '../../assets/svg';
+import { TagType } from '../../type';
 
-const _Tag: FC<{ item: { name: string; website: string } }> = ({ item }): JSX.Element => {
+const _Tag: FC<{ item: TagType }> = ({ item }): JSX.Element => {
 	return (
 		<TagWrapper>
 			<div className='card-wrapper'>
