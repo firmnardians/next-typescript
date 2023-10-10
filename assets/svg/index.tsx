@@ -19,8 +19,8 @@ export const LogoSVG = () => {
 			/>
 			<defs>
 				<linearGradient id='paint0_linear_2_35241' x1='34.9547' y1='7.49649' x2='-8.62393e-05' y2='7.50227' gradientUnits='userSpaceOnUse'>
-					<stop stop-color='#FFD25F' />
-					<stop offset='1' stop-color='#FF5C01' />
+					<stop stopColor='#FFD25F' />
+					<stop offset='1' stopColor='#FF5C01' />
 				</linearGradient>
 			</defs>
 		</svg>
