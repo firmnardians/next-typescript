@@ -8,7 +8,7 @@ import Button from '../button/Button';
 import Skeleton from '../skeleton/Skeleton';
 import { ResultStateType } from '../../type';
 
-const _ResultPage = () => {
+const _ResultPage = (): JSX.Element => {
 	const [data, setData] = useState<ResultStateType>({ source: [], isLoading: true, perpage: 0, page: 0 });
 
 	const router = useRouter();

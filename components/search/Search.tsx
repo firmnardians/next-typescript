@@ -5,7 +5,7 @@ import SliderRange from '../slider/Slider';
 import Button from '../button/Button';
 import { SearchPageType } from '../../type';
 
-const _Search: FC<SearchPageType> = ({ value, isDisabled, onChangeInput, onClickButton, result, onChangeSlider }) => {
+const _Search: FC<SearchPageType> = ({ value, isDisabled, onChangeInput, onClickButton, result, onChangeSlider }): JSX.Element => {
 	return (
 		<SearchWrapper>
 			<Input placeholder='Keyword' value={value} onChange={onChangeInput} />

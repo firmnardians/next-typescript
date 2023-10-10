@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { SidebarWrapper } from './styled/sidebar.styled';
 import { IconHome, IconLayout } from '../../assets/svg/icon';
 import Link from 'next/link';
 import { LogoSVG } from '../../assets/svg';
 
-export default function Sidebar() {
+const _Sidebar = (): JSX.Element => {
 	return (
 		<SidebarWrapper>
 			<div className='list-menu'>
@@ -32,4 +32,7 @@ export default function Sidebar() {
 			</div>
 		</SidebarWrapper>
 	);
-}
+};
+
+const Sidebar = memo(_Sidebar);
+export default Sidebar;
