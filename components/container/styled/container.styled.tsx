@@ -6,5 +6,7 @@ export const ContainerWrapper = styled.div`
 	.container {
 		width: 100%;
 		padding: 60px 20px;
+		overflow-y: scroll;
+		height: 100svh;
 	}
 `;
