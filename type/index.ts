@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, InputHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, ChangeEvent, InputHTMLAttributes } from 'react';
 
 export type ButtonType = ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -13,3 +13,25 @@ export type ProfileType = {
 };
 
 export type ProfileSourceType = Array<ProfileType>;
+
+export type SearchPageType = {
+	value: string;
+	isDisabled: boolean;
+	onChangeInput: (e: ChangeEvent<HTMLInputElement>) => void;
+	onClickButton: () => void;
+	result: number;
+	onChangeSlider: (value: number | number[]) => void;
+};
+
+export type ResultType = {
+	id: number;
+	title: string;
+	thumbnailUrl: string;
+};
+
+export type ResultStateType = {
+	source: Array<ResultType>;
+	isLoading: boolean;
+	perpage: number;
+	page: number;
+};
