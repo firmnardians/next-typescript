@@ -4,6 +4,10 @@ export const SidebarWrapper = styled.aside`
 	background-color: var(--greyscale-light-bg);
 	height: 100svh;
 
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
+
 	.list-menu {
 		padding: 10px;
 

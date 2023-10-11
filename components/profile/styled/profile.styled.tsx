@@ -9,6 +9,10 @@ export const ProfileWrapper = styled.div<{ active: boolean }>`
 	transition: all 0.5s ease-in-out;
 	transform: ${({ active }) => (active ? `translateX(0px)` : ` translateX(500px)`)};
 
+	@media only screen and (max-width: 1440px) {
+		display: none;
+	}
+
 	.tabs {
 		padding: 0px;
 

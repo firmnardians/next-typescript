@@ -53,7 +53,7 @@ const _ResultPage = (): JSX.Element => {
 				<div className='row'>
 					{data?.source?.map((item) => {
 						return (
-							<div key={item?.id} className='col-4'>
+							<div key={item?.id} className='col-sm-6 col-md-4'>
 								<div className='card-result'>
 									<div className='image-wrapper'>
 										<img src={item?.thumbnailUrl} alt='Image' />

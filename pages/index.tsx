@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
 	return (
 		<Layout isBack={isBackButton} title={isBackButton ? 'Results' : 'Search'}>
-			<div className='mt-5 pe-5'>
+			<div className='mt-5 pe-lg-0 pe-xl-5'>
 				{renderResult ? (
 					<ResultPage />
 				) : (
