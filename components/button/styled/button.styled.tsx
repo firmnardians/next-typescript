@@ -24,5 +24,16 @@ export const ButtonWrapper = styled.div`
 			background-color: transparent;
 			color: #ffffff;
 		}
+
+		&:disabled {
+			cursor: not-allowed;
+			opacity: 0.5;
+
+			&:hover {
+				border: 2px solid #ffffff;
+				background-color: #ffffff;
+				color: #000000;
+			}
+		}
 	}
 `;
