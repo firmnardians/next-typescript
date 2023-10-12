@@ -8,5 +8,9 @@ export const ContainerWrapper = styled.div`
 		padding: 60px 20px;
 		overflow-y: scroll;
 		height: 100svh;
+
+		@media only screen and (max-width: 768px) {
+			padding-bottom: 100px;
+		}
 	}
 `;

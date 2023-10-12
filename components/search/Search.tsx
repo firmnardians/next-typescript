@@ -20,7 +20,7 @@ const _Search: FC<SearchPageType> = ({ value, isDisabled, onChangeInput, onClick
 				<SliderRange onChange={onChangeSlider} />
 			</div>
 
-			<div className='position-absolute' style={{ bottom: 20 }}>
+			<div className='position-absolute btn-wrapper'>
 				<Button title='Search' disabled={isDisabled} onClick={onClickButton} />
 			</div>
 		</SearchWrapper>

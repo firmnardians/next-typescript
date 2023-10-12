@@ -9,11 +9,9 @@ const _Sidebar = (): JSX.Element => {
 		<SidebarWrapper>
 			<div className='list-menu'>
 				<ul>
-					<Link href='/'>
-						<li className='logo'>
-							<LogoSVG />
-						</li>
-					</Link>
+					<li className='logo'>
+						<LogoSVG />
+					</li>
 
 					<Link href='/'>
 						<li>

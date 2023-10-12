@@ -35,7 +35,7 @@ const Tags: NextPage = () => {
 				{data?.isLoading ? (
 					<Skeleton />
 				) : (
-					<div className='row row-cols-5 '>
+					<div className='row row-cols-2 row-cols-md-5'>
 						{data?.source?.map((item, index) => {
 							return (
 								<div key={index} className='col'>

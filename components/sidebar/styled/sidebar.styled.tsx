@@ -4,10 +4,6 @@ export const SidebarWrapper = styled.aside`
 	background-color: var(--greyscale-light-bg);
 	height: 100svh;
 
-	@media only screen and (max-width: 768px) {
-		display: none;
-	}
-
 	.list-menu {
 		padding: 10px;
 
@@ -43,6 +39,40 @@ export const SidebarWrapper = styled.aside`
 			.logo {
 				&:hover {
 					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: auto;
+		z-index: 99;
+
+		.list-menu {
+			ul {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin: 0;
+
+				.logo {
+					display: none;
+				}
+
+				a {
+					width: 50%;
+
+					li {
+						margin-bottom: 0;
+
+						p {
+							display: none;
+						}
+					}
 				}
 			}
 		}
